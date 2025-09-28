@@ -21,6 +21,8 @@ int main() {
 
     print(&vec);
 
+    rwvec_int_clear(&vec);
+
     rwvec_int_del(&vec);
     return 0;
 }

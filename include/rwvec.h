@@ -42,6 +42,13 @@
         if (vec->length == 0) \
             vec->data = NULL; \
     }
+#define IMPL_VEC_CLEAR(name, type) \
+    void name##_clear(struct name* vec) { \
+        if (vec->data) \
+            free(vec->data); \
+        vec->data = NULL; \
+        vec->length = vec->capacity = 0; \
+    }
 #define IMPL_VEC_REMOVE(name, type) \
     void name##_remove(struct name* vec, size_t index) { \
         if (index >= vec->length) \
@@ -77,6 +84,7 @@
     IMPL_VEC_DEL(name, type) \
     IMPL_VEC_PUSH(name, type) \
     IMPL_VEC_POP(name, type) \
+    IMPL_VEC_CLEAR(name, type) \
     IMPL_VEC_REMOVE(name, type) \
     IMPL_VEC_INSERT(name, type)
 
