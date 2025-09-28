@@ -11,11 +11,5 @@ include/rwvec.h:
 include/rwvec_vecs.h: include/rwvec.h
 	touch $@
 
-src/rwvec.c: include/rwvec_vecs.h
-	touch $@
-
-rwvec.o: src/rwvec.c
-	$(CC) $(CFLAGS)	-c -o $@ $^
-
-main: src/main.c rwvec.o
+main: src/main.c include/rwvec_vecs.h
 	$(CC) $(CFLAGS) -o $@ $^
