@@ -10,7 +10,7 @@ void print(rwvec_int_t* vec) {
     printf("\n");
 }
 
-int main() {
+int main(void) {
     rwvec_int_t vec = rwvec_int_new();
 
     rwvec_int_push(&vec, 123);

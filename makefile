@@ -12,4 +12,4 @@ include/rwvec_vecs.h: include/rwvec.h
 	touch $@
 
 main: src/main.c include/rwvec_vecs.h
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $<

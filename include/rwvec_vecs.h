@@ -34,3 +34,4 @@ VECTOR(rwvec_void_p, void*)
 /* your custom implementations go here */
 
 #endif
+
