@@ -5,7 +5,6 @@
 
 #include "rwvec.h"
 
-/* default vectors */
 #ifdef RWVEC_VECS_IMPL
     #define VECTOR(name, type) \
         DEFINE_VEC(name, type); \
@@ -18,6 +17,7 @@
     VECTOR(name, type) \
     VECTOR(name##_p, type*)
 
+/* default vectors */
 VECTOR_WITH_POINTER(rwvec_int, int)
 VECTOR_WITH_POINTER(rwvec_uint, unsigned int)
 VECTOR_WITH_POINTER(rwvec_long, long)
